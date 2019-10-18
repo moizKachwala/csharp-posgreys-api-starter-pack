@@ -22,5 +22,32 @@ namespace TopCoderStarterApp.Services
                             .Users
                             .ToListAsync();
         }
+
+        public async Task<User> GetUser(long id)
+        {
+            return await _context
+                        .Users
+                        .AsNoTracking()
+                        .SingleOrDefaultAsync(c => c.Id == id);
+        }
+
+        public async Task Create(User user)
+        {
+            _context.Add(user);
+            await _context.SaveChangesAsync();
+        }
+        public async Task<bool> Update(User user)
+        {
+            _context.Users.Attach(user);
+            _context.Entry(user).State = EntityState.Modified;
+            return (await _context.SaveChangesAsync() > 0 ? true : false);
+        }
+        public async Task<bool> Delete(long id)
+        {
+            var customer = await _context.Users.SingleOrDefaultAsync(c => c.Id == id);
+            _context.Remove(customer);
+
+            return (await _context.SaveChangesAsync() > 0 ? true : false);
+        }
     }
 }
