@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace dockerapi.Models
+namespace TopCoderStarterApp.Models
 {
 #pragma warning disable CS1591
     public class Blog

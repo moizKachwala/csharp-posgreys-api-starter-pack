@@ -1,10 +1,10 @@
-using dockerapi.Models;
+using TopCoderStarterApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
 using System.Linq;
-using dockerapi.Services;
+using TopCoderStarterApp.Services;
 
-namespace dockerapi.Controllers
+namespace TopCoderStarterApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

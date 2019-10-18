@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "dockerapi": {
+    "TopCoderStarterApp": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",

@@ -1,21 +1,22 @@
-using dockerapi.Models;
+using TopCoderStarterApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
 using System.Linq;
-using dockerapi.Services;
+using TopCoderStarterApp.Services;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using TopCoderStarterApp.Services.Interfaces;
 
-namespace dockerapi.Controllers
+namespace TopCoderStarterApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
 #pragma warning disable CS1591
-    public class UserController : ControllerBase
+    public class UsersController : ControllerBase
     {
-        private readonly UserRepository _repo;
+        private readonly IUserRepository _repo;
 
-        public UserController(UserRepository context)
+        public UsersController(IUserRepository context)
         {
             _repo = context;
         }

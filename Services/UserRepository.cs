@@ -1,12 +1,12 @@
-﻿using dockerapi.Models;
-using dockerapi.Services.Interfaces;
+﻿using TopCoderStarterApp.Models;
+using TopCoderStarterApp.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace dockerapi.Services
+namespace TopCoderStarterApp.Services
 {
     public class UserRepository: IUserRepository
     {

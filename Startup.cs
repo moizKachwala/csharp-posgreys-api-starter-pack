@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using dockerapi.Models;
-using dockerapi.Services;
-using dockerapi.Services.Interfaces;
+using TopCoderStarterApp.Models;
+using TopCoderStarterApp.Services;
+using TopCoderStarterApp.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -19,7 +19,7 @@ using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 
 
-namespace dockerapi
+namespace TopCoderStarterApp
 {
 #pragma warning disable CS1591
     public class Startup
@@ -34,7 +34,7 @@ namespace dockerapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = "host=postgres_image;port=5432;database=blogdb;username=bloguser;password=bloguser"; // Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
+            var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
             services.AddDbContext<ApiDBContext>(options =>
                 options.UseNpgsql(
                     connectionString

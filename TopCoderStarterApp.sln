@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dockerapi", "dockerapi.csproj", "{A5473556-8E9C-492A-8C10-E75BF866FA1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopCoderStarterApp", "TopCoderStarterApp.csproj", "{5B9DC22E-0A50-4B26-9AF9-699C1E1CBB16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A5473556-8E9C-492A-8C10-E75BF866FA1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A5473556-8E9C-492A-8C10-E75BF866FA1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A5473556-8E9C-492A-8C10-E75BF866FA1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A5473556-8E9C-492A-8C10-E75BF866FA1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B9DC22E-0A50-4B26-9AF9-699C1E1CBB16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B9DC22E-0A50-4B26-9AF9-699C1E1CBB16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B9DC22E-0A50-4B26-9AF9-699C1E1CBB16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B9DC22E-0A50-4B26-9AF9-699C1E1CBB16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7E74BA2D-29BB-4007-961D-A6678D6E7DF6}
+		SolutionGuid = {5D01CA68-329C-4619-8BC4-C93707E832D8}
 	EndGlobalSection
 EndGlobal

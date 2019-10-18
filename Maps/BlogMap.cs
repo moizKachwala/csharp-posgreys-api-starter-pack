@@ -1,10 +1,10 @@
 
-using dockerapi.Models;
+using TopCoderStarterApp.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 
-namespace dockerapi.Maps{
+namespace TopCoderStarterApp.Maps{
     #pragma warning disable CS1591
        public class BlogMap
     {

@@ -1,10 +1,10 @@
-﻿using dockerapi.Models;
+﻿using TopCoderStarterApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace dockerapi.Services.Interfaces
+namespace TopCoderStarterApp.Services.Interfaces
 {
     public interface IUserRepository
     {

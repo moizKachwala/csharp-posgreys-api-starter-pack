@@ -1,9 +1,9 @@
-﻿using dockerapi.Maps;
+﻿using TopCoderStarterApp.Maps;
 using Microsoft.EntityFrameworkCore;
-using dockerapi.Models;
+using TopCoderStarterApp.Models;
 using System;
 
-namespace dockerapi.Services
+namespace TopCoderStarterApp.Services
 {
 #pragma warning disable CS1591
     public class ApiDBContext : DbContext
@@ -13,13 +13,10 @@ namespace dockerapi.Services
         {
 
         }
-        public DbSet<Blog> Blogs { get; set; }
         public DbSet<User> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            new BlogMap(modelBuilder.Entity<Blog>());
             new UserMap(modelBuilder.Entity<User>());
         }
     }

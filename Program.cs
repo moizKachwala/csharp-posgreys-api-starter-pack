@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace dockerapi
+namespace TopCoderStarterApp
 {
 #pragma warning disable CS1591
     public class Program
