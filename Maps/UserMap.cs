@@ -11,7 +11,7 @@ namespace TopCoderStarterApp.Maps{
         public UserMap(EntityTypeBuilder<User> entityBuilder)
         {
             entityBuilder.HasKey(x => x.Id);
-            entityBuilder.ToTable("Users");
+            entityBuilder.ToTable("users");
 
             entityBuilder.Property(x => x.Id).HasColumnName("id");
             entityBuilder.Property(x => x.Firstname).HasColumnName("firstname");
