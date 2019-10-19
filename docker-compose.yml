@@ -5,19 +5,6 @@ networks:
     driver: bridge 
 
 services:
-  app:
-    depends_on:
-      - "postgres"
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "5000:80"     
-    environment:
-      DB_CONNECTION_STRING: "host=postgres;port=5432;database=blogdb;username=bloguser;password=bloguser"
-    networks:
-      - topcoder-dev  
-  
   postgres:
     image: postgres:latest
     ports:
@@ -32,6 +19,20 @@ services:
       POSTGRES_DB: "blogdb"
     networks:
       - topcoder-dev
+  app:
+    depends_on:
+      - "postgres"
+    build: .
+    ports:
+      - "5000:80"     
+    environment:
+      POSTGRES_DB: blogdb
+      POSTGRES__Host: postgres
+      POSTGRES__PORT: 5432
+      POSTGRES__USER: bloguser
+      POSTGRES__PASSWORD: bloguser
+    networks:
+      - topcoder-dev  
 volumes:
   db_volume:
          

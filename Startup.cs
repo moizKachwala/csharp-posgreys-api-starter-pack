@@ -16,8 +16,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Swashbuckle.AspNetCore.Swagger;
-
 
 namespace TopCoderStarterApp
 {
@@ -34,17 +32,19 @@ namespace TopCoderStarterApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
+            var config = new ServerConfig();
+            Configuration.Bind(config);
+
             services.AddDbContext<ApiDBContext>(options =>
                 options.UseNpgsql(
-                    connectionString
+                    config.MongoDB.ConnectionString
                 )
             );
 
             // Adding our Repositories (scoped to each request)
             services.AddScoped<IUserRepository, UserRepository>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
