@@ -1,13 +1,19 @@
 
-using TopCoderStarterApp.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using TopCoderStarterApp.Models;
 
 
-namespace TopCoderStarterApp.Maps{
-    #pragma warning disable CS1591
-       public class UserMap
+namespace TopCoderStarterApp.Maps
+{
+#pragma warning disable CS1591
+    public class UserMap
     {
+        /// <summary>
+        /// Mapping of User with database table.
+        /// Purpose is if we want to map different keys in database with our object then we can do it.
+        /// </summary>
+        /// <param name="entityBuilder"></param>
         public UserMap(EntityTypeBuilder<User> entityBuilder)
         {
             entityBuilder.HasKey(x => x.Id);
@@ -18,5 +24,5 @@ namespace TopCoderStarterApp.Maps{
             entityBuilder.Property(x => x.Lastname).HasColumnName("lastname");
         }
     }
-    #pragma warning restore CS1591
+#pragma warning restore CS1591
 }

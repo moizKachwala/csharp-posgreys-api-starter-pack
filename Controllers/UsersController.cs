@@ -1,10 +1,7 @@
-using TopCoderStarterApp.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Encodings.Web;
-using System.Linq;
-using TopCoderStarterApp.Services;
-using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using TopCoderStarterApp.Models;
 using TopCoderStarterApp.Services.Interfaces;
 
 namespace TopCoderStarterApp.Controllers

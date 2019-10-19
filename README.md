@@ -1,16 +1,63 @@
-# ASP.Net Core Web API with Docker Compose, PostgreSQL and EF Core.
-A simple ASP.NET Core sample web application using .Net Web Api Core and PostgreSQL with Docker support.Both the Web Applicaiton and the Postgres DB runs in container. Added Swagger support to interact with API’s resources.
+# csharp-postgreysdb-api-starter-pack
+Starter pack with C# postgreysdb Docker
 
-## Prerequisites
-1. [Docker](https://www.docker.com/)
+It will perform basic CRUD operations. Postman suite attached in the repository topcoder-suite.json
 
-## Steps
-1. `git clone https://github.com/rajvirtual/docker-aspnetcore-postgresql.git`
 
-2. `cd docker-aspnetcore-postgresql`
+## Steps to Run
+1. Clone the repository
+2. Install Docker
+3. execute command `docker-compose up`
+4. It will pull the postgreys image and run the app.
 
-3. `docker-compose build`
 
-4. `docker-compose up`
+## Steps to Rebuild
+`docker-compose build`
 
-5.  Navigate to http://localhost:8000/swagger
+## Steps to stop the container
+`docker-compose down`
+
+### MONGO Configuration in docker compose
+
+`postgreysDB__DATABASE` - Database Name
+
+`postgreysDB__Host` - Database Host
+
+`postgreysDB__PORT` - Database Port
+
+`postgreysDB__USER` - Database User
+
+`postgreysDB__PASSWORD` - Database Password
+
+# API's dcoumentation
+`http://localhost:5000/api/users`
+
+### GET All Users
+`GET http://localhost:5000/api/users`
+
+### Create User
+`POST http://localhost:5000/api/users`
+
+`{
+	"firstName": "john",
+	"lastName": "smith"
+}`
+
+### PUT User
+`PUT http://localhost:5000/api/users/1`
+
+`{
+	"firstName": "john",
+	"lastName": "wills"
+}`
+
+### GET User
+`GET http://localhost:5000/api/users/1`
+
+
+### DELETE User
+`DELETE http://localhost:5000/api/users/1`
+
+
+### Postman Suite
+`top-coder-postgreys-starter.postman_collection.json`

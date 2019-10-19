@@ -1,7 +1,6 @@
-﻿using TopCoderStarterApp.Maps;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using TopCoderStarterApp.Maps;
 using TopCoderStarterApp.Models;
-using System;
 
 namespace TopCoderStarterApp.Services
 {
@@ -17,6 +16,8 @@ namespace TopCoderStarterApp.Services
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            // Binding the model with database table
             new UserMap(modelBuilder.Entity<User>());
         }
     }
