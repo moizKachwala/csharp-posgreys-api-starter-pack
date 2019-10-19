@@ -14,9 +14,9 @@ services:
       - db_volume:/var/lib/postgresql/data
       - ./dbscripts/seed.sql :/docker-entrypoint-initdb.d/seed.sql
     environment:
-      POSTGRES_USER: "bloguser"
-      POSTGRES_PASSWORD: "bloguser"
-      POSTGRES_DB: "blogdb"
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "example"
+      POSTGRES_DB: "userdb"
     networks:
       - topcoder-dev
   app:
@@ -26,11 +26,11 @@ services:
     ports:
       - "5000:80"
     environment:
-      PostgresDB__DATABASE: blogdb
+      PostgresDB__DATABASE: userdb
       PostgresDB__Host: postgres
       PostgresDB__PORT: 5432
-      PostgresDB__USER: bloguser
-      PostgresDB__PASSWORD: bloguser
+      PostgresDB__USER: root
+      PostgresDB__PASSWORD: example
     networks:
       - topcoder-dev  
 volumes:

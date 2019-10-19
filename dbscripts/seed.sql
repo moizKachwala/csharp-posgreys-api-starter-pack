@@ -1,5 +1,5 @@
 
-\connect blogdb
+\connect userdb
 
 CREATE TABLE users
 (   
@@ -7,5 +7,3 @@ CREATE TABLE users
     firstname  VARCHAR (50)  NOT NULL,
     lastname  VARCHAR (50)  NOT NULL
 );
-
-ALTER TABLE users OWNER TO bloguser;
