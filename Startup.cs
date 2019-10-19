@@ -37,7 +37,7 @@ namespace TopCoderStarterApp
 
             services.AddDbContext<ApiDBContext>(options =>
                 options.UseNpgsql(
-                    config.MongoDB.ConnectionString
+                    config.PostgresDB.ConnectionString
                 )
             );
 

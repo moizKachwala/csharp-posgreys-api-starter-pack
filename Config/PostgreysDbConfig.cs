@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace TopCoderStarterApp
 {
-    public class MongoDBConfig
+    public class PostgreysDBConfig
     {
         public string Database { get; set; }
         public string Host { get; set; }

@@ -24,13 +24,13 @@ services:
       - "postgres"
     build: .
     ports:
-      - "5000:80"     
+      - "5000:80"
     environment:
-      POSTGRES_DB: blogdb
-      POSTGRES__Host: postgres
-      POSTGRES__PORT: 5432
-      POSTGRES__USER: bloguser
-      POSTGRES__PASSWORD: bloguser
+      PostgresDB__DATABASE: blogdb
+      PostgresDB__Host: postgres
+      PostgresDB__PORT: 5432
+      PostgresDB__USER: bloguser
+      PostgresDB__PASSWORD: bloguser
     networks:
       - topcoder-dev  
 volumes:
